@@ -88,11 +88,11 @@ Comparative Analysis: Side-by-side model performance comparison
 
 1.Clone the repository:
 
-bash : git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
 
 2.Install dependencies:
 
-bash : pip install numpy pandas matplotlib seaborn scikit-learn ipywidgets
+    pip install numpy pandas matplotlib seaborn scikit-learn ipywidgets
 
 3.Prepare your data:
 
@@ -118,11 +118,9 @@ Production-Ready Code: Clean, modular, and well-documented
 
 📁 Project Structure
 
-├── STOCK MARKET PRICE PREDICTION (APPLE INC.).py  # Main application
-
-├── AAPL.csv                                       # Stock dataset
-                                 
-└── README.md                                      # Project documentation
+    ├── STOCK MARKET PRICE PREDICTION (APPLE INC.).py  # Main application
+    ├── AAPL.csv                                       # Stock dataset                            
+    └── README.md                                      # Project documentation
 
 ⚠️ Important Disclaimer
 
