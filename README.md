@@ -1,139 +1,113 @@
-📈 Apple Inc. Stock Price Prediction using Machine Learning
+# 📈 Apple Inc. Stock Price Prediction using Machine Learning
 
-📖 Project Overview
+## 📖 Project Overview
 
 This project implements a comprehensive machine learning system to predict Apple Inc. (AAPL) stock closing prices using classical machine learning algorithms. Unlike deep learning approaches, this solution employs multiple regression models to provide interpretable and efficient stock price forecasts with a user-friendly interactive prediction interface.
 
 The system compares various machine learning algorithms to identify the best-performing model for stock price prediction and includes real-time next-day price forecasting capabilities.
 
-🧠 Machine Learning Models Implemented
+## 🧠 Machine Learning Models Implemented
 
-Linear Regression: Baseline model for establishing linear relationships
+- **Linear Regression**: Baseline model for establishing linear relationships
+- **Decision Tree Regressor**: Captures non-linear patterns in stock data
+- **Random Forest Regressor**: Ensemble method that reduces overfitting
+- **Support Vector Regressor (SVR)**: Handles complex non-linear relationships with RBF kernel
 
-Decision Tree Regressor: Captures non-linear patterns in stock data
-
-Random Forest Regressor: Ensemble method that reduces overfitting
-
-Support Vector Regressor (SVR): Handles complex non-linear relationships with RBF kernel
-
-📊 Dataset Features
+## 📊 Dataset Features
 
 The project uses historical AAPL stock data containing:
 
-Date: Trading date
+- **Date**: Trading date
+- **Open**: Opening price
+- **High**: Highest price during the day
+- **Low**: Lowest price during the day
+- **Close**: Closing price (Target Variable)
+- **Adj Close**: Adjusted closing price
+- **Volume**: Trading volume
 
-Open: Opening price
+## 🛠️ Technical Implementation
 
-High: Highest price during the day
+### Data Pipeline
 
-Low: Lowest price during the day
+1. **Data Loading & Preprocessing**: Handles missing values and datetime conversion
+2. **Exploratory Data Analysis**: Correlation heatmaps and statistical summaries
+3. **Feature Engineering**: Uses Open, High, Low, and Volume as predictive features
+4. **Time-aware Split**: Maintains chronological order in train/test splits
 
-Close: Closing price (Target Variable)
+### Model Training & Evaluation
 
-Adj Close: Adjusted closing price
+- **Standardized Preprocessing**: Feature scaling for models requiring normalization
+- **Comprehensive Metrics**: MSE, RMSE, MAE, and R² scores for model comparison
+- **Visualization**: Actual vs Predicted price charts for performance analysis
 
-Volume: Trading volume
-
-🛠️ Technical Implementation
-
-Data Pipeline
-
-1.Data Loading & Preprocessing: Handles missing values and datetime conversion
-
-2.Exploratory Data Analysis: Correlation heatmaps and statistical summaries
-
-3.Feature Engineering: Uses Open, High, Low, and Volume as predictive features
-
-4.Time-aware Split: Maintains chronological order in train/test splits
-
-Model Training & Evaluation
-
-Standardized Preprocessing: Feature scaling for models requiring normalization
-
-Comprehensive Metrics: MSE, RMSE, MAE, and R² scores for model comparison
-
-Visualization: Actual vs Predicted price charts for performance analysis
-
-📈 Performance Metrics
+## 📈 Performance Metrics
 
 The system evaluates models using:
 
-Mean Squared Error (MSE): Penalizes larger errors
+- **Mean Squared Error (MSE)**: Penalizes larger errors
+- **Root Mean Squared Error (RMSE)**: Interpretable in original units
+- **Mean Absolute Error (MAE)**: Robust to outliers
+- **R² Score**: Proportion of variance explained by the model
 
-Root Mean Squared Error (RMSE): Interpretable in original units
+## 🎯 Interactive Features
 
-Mean Absolute Error (MAE): Robust to outliers
+### Real-time Prediction Interface
 
-R² Score: Proportion of variance explained by the model
+- **Dynamic Input Form**: Users can input market data for next-day prediction
+- **Visual Feedback**: Color-coded results based on model confidence
+- **Instant Results**: Real-time price predictions with accuracy metrics
 
-🎯 Interactive Features
+### Model Selection
 
-Real-time Prediction Interface
+- **Automated Best Model Detection**: System identifies top performer based on R² score
+- **Performance Explanations**: Detailed reasoning for why specific models excel
+- **Comparative Analysis**: Side-by-side model performance comparison
 
-Dynamic Input Form: Users can input market data for next-day prediction
+## 🚀 How to Use
 
-Visual Feedback: Color-coded results based on model confidence
+1. **Clone the repository**:
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+```
 
-Instant Results: Real-time price predictions with accuracy metrics
+2. **Install dependencies**:
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn ipywidgets
+```
 
-Model Selection
+3. **Prepare your data**:
+   - Download AAPL historical data from sources like Yahoo Finance
+   - Save as AAPL.csv in the project directory
 
-Automated Best Model Detection: System identifies top performer based on R² score
+4. **Run the application**:
+```bash
+python "STOCK MARKET PRICE PREDICTION (APPLE INC.).py"
+```
 
-Performance Explanations: Detailed reasoning for why specific models excel
+## 💡 Key Features
 
-Comparative Analysis: Side-by-side model performance comparison
+- **Multi-Model Comparison**: Tests 4 different regression algorithms
+- **Time Series Awareness**: Maintains temporal data integrity
+- **Interactive Visualization**: Dynamic charts and real-time predictions
+- **Comprehensive Evaluation**: Multiple error metrics and visual comparisons
+- **Production-Ready Code**: Clean, modular, and well-documented
 
-🚀 How to Use
+## 📁 Project Structure
 
-1.Clone the repository:
+```
+├── STOCK MARKET PRICE PREDICTION (APPLE INC.).py  # Main application
+├── AAPL.csv                                       # Stock dataset                            
+└── README.md                                      # Project documentation
+```
 
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+## ⚠️ Important Disclaimer
 
-2.Install dependencies:
+**This project is for educational and research purposes only.** Stock market predictions are inherently uncertain and should not be used for actual trading decisions. Always consult with financial professionals before making investment choices.
 
-    pip install numpy pandas matplotlib seaborn scikit-learn ipywidgets
+## 🔮 Future Enhancements
 
-3.Prepare your data:
-
-Download AAPL historical data from sources like Yahoo Finance
-
-Save as AAPL.csv in the project directory
-
-4.Run the application:
-
-bash : python "STOCK MARKET PRICE PREDICTION (APPLE INC.).py"
-
-💡 Key Features
-
-Multi-Model Comparison: Tests 4 different regression algorithms
-
-Time Series Awareness: Maintains temporal data integrity
-
-Interactive Visualization: Dynamic charts and real-time predictions
-
-Comprehensive Evaluation: Multiple error metrics and visual comparisons
-
-Production-Ready Code: Clean, modular, and well-documented
-
-📁 Project Structure
-
-    ├── STOCK MARKET PRICE PREDICTION (APPLE INC.).py  # Main application
-    ├── AAPL.csv                                       # Stock dataset                            
-    └── README.md                                      # Project documentation
-
-⚠️ Important Disclaimer
-
-This project is for educational and research purposes only. Stock market predictions are inherently uncertain and should not be used for actual trading decisions. Always consult with financial professionals before making investment choices.
-
-🔮 Future Enhancements
-
-Integration of additional technical indicators
-
-Sentiment analysis from financial news
-
-Long-term forecasting capabilities
-
-Web application deployment
-
-Real-time data streaming integration
+- Integration of additional technical indicators
+- Sentiment analysis from financial news
+- Long-term forecasting capabilities
+- Web application deployment
+- Real-time data streaming integration
